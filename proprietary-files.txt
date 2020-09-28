@@ -693,6 +693,9 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
+# Power-off charging daemon - from qssi-user-11-RKQ1.200710.002-V12.1.2.0.RJACNXM-release-keys
+bin/charger:bin/charger|4b600706d503dce9cf3b41b81f9c9a618a458221
+
 # QMI
 etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
