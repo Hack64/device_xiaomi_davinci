@@ -7,6 +7,10 @@
 # DC Dimming
 /sys/devices/platform/soc/soc:qcom,dsi-display/msm_fb_ea_enable      u:object_r:sysfs_dm:s0
 
+#DRM
+/vendor/bin/hw/android\.hardware\.drm@1\.3-service\.clearkey         u:object_r:hal_drm_clearkey_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.3-service\.widevine         u:object_r:hal_drm_widevine_exec:s0 
+
 # Fingerprint
 /dev/goodix_fp                                                       u:object_r:fingerprint_device:s0
 /data/vendor/goodix(/.*)?                                            u:object_r:fingerprint_data_file:s0
