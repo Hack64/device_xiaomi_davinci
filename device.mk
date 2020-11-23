@@ -24,7 +24,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/xiaomi/davinci/davinci-vendor.mk)
 
 # Gapps
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+ifeq ($(WITH_GAPPS), true)
+    $(call inherit-product, vendor/gapps/gapps.mk)
+    DOT_BUILD_TYPE:=GAPPS
+endif
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
