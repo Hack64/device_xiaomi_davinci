@@ -24,6 +24,7 @@ $(call inherit-product, device/xiaomi/davinci/device.mk)
 # Inherit some common DotOS stuff.
 $(call inherit-product, vendor/dot/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+EXTRA_FOD_ANIMATIONS := true
 
 PRODUCT_NAME := dot_davinci
 PRODUCT_DEVICE := davinci
