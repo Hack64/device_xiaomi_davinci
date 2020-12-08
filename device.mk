@@ -26,12 +26,6 @@ $(call inherit-product, vendor/xiaomi/davinci/davinci-vendor.mk)
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/miuicamera/common/common-vendor.mk)
 
-# Gapps
-ifeq ($(WITH_GAPPS), true)
-    $(call inherit-product, vendor/gapps/gapps.mk)
-    DOT_BUILD_TYPE:=GAPPS
-endif
-
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -286,8 +280,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-dot
+    $(LOCAL_PATH)/overlay
 
 # Power
 PRODUCT_PACKAGES += \
