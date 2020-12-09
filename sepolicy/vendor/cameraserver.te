@@ -1,3 +1,1 @@
-allow cameraserver app_data_file:file { read };
-
 hal_client_domain(cameraserver, hal_motor)
